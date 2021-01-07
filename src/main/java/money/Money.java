@@ -1,7 +1,5 @@
 package money;
 
-import java.util.concurrent.RecursiveTask;
-
 public class Money implements Expression {
     protected int amount;
     protected String currency;
@@ -34,15 +32,18 @@ public class Money implements Expression {
         return currency;
     }
 
+    public Money reduce(Bank bank, String to) {
+        int rate = (currency.equals("CHF") && to.equals("USD"))
+                ? 2
+                : 1;
+        return new Money(amount / rate, to);
+    }
+
     Expression plus(Money addend) {
         return new Sum(this, addend);
     }
 
     Money times(int multiplier) {
         return new Money(amount * multiplier, currency);
-    }
-
-    public Money reduce(String to) {
-        return this;
     }
 }
