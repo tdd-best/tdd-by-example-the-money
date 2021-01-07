@@ -2,7 +2,7 @@ package money;
 
 class Franc extends Money {
 
-    Franc(int amount) {
+    Franc(int amount, String currency) {
         this.amount = amount;
         currency = "CHF";
     }
