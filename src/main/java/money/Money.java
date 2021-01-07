@@ -17,5 +17,7 @@ public abstract class Money {
                 && getClass().equals(money.getClass());
     }
 
+    public abstract String currency();
+
     abstract Money times(int multiplier);
 }
