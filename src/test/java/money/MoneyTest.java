@@ -9,7 +9,7 @@ public class MoneyTest {
     public void testMultiplication() {
         Dollar five = new Dollar(5);
         Dollar product = five.times(2);
-        assertEquals(10, product.amount);
+        assertEquals(new Dollar(10), product); // Dollar 跟 Dollar 比較
         product = five.times(3);
         assertEquals(15, product.amount);
     }
