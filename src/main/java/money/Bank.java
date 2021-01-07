@@ -14,4 +14,14 @@ public class Bank {
                 ? 2
                 : 1;
     }
+
+    private class Pair {
+        private String from;
+        private String to;
+
+        Pair(String from, String to) {
+            this.from = from;
+            this.to = to;
+        }
+    }
 }
