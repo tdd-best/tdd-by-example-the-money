@@ -7,6 +7,10 @@ public abstract class Money {
         return new Dollar(amount);
     }
 
+    static Money franc(int amount) {
+        return new Franc(amount);
+    }
+
     public boolean equals(Object object) {
         Money money = (Money) object;
         return amount == money.amount
