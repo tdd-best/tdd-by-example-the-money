@@ -25,6 +25,11 @@ public class Money {
                 && getClass().equals(money.getClass());
     }
 
+    @Override
+    public String toString() {
+        return amount + " " + currency;
+    }
+
     public String currency() {
         return currency;
     }
