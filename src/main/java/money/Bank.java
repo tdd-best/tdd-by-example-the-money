@@ -9,8 +9,8 @@ public class Bank {
         return source.reduce(this, to);
     }
 
-    public void addRate(String source, String to, int rate) {
-
+    public void addRate(String from, String to, int rate) {
+        rates.put(new Pair(from, to), rate);
     }
 
     int rate(String from, String to) {
