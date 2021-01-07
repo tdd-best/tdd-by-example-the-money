@@ -1,6 +1,8 @@
 package money;
 
-public abstract class Money {
+import java.util.concurrent.RecursiveTask;
+
+public class Money {
     protected int amount;
     protected String currency;
 
@@ -27,5 +29,7 @@ public abstract class Money {
         return currency;
     }
 
-    abstract Money times(int multiplier);
+    Money times(int multiplier) {
+        return null;
+    }
 }
