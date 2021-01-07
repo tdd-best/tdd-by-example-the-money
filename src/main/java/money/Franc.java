@@ -1,6 +1,6 @@
 package money;
 
-class Franc {
+class Franc extends Money {
     private int amount;
 
     Franc(int amount) {
