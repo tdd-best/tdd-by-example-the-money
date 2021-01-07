@@ -41,4 +41,8 @@ public class Money implements Expression {
     Money times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
+
+    public Money reduce(String to) {
+        return this;
+    }
 }
